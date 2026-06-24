@@ -1,9 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from database import create_db
 
 from routers import auth, evaluate
 
 app = FastAPI(title="Resume Evaluator API")
+@app.on_event("startup")
+def on_startup():
+    create_db()
 
 app.add_middleware(
     CORSMiddleware,

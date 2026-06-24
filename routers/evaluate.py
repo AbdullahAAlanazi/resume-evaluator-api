@@ -11,5 +11,4 @@ def evaluate(request: EvaluateRequest, current_user: str = Depends(get_current_u
     return EvaluateResponse(
         result="Evaluation requested by "
         + current_user
-        + ". ChatGPT integration coming in Stage 5."
-    )
+        + ". ChatGPT integration coming in Stage 5.")
