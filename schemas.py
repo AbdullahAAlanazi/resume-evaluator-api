@@ -28,3 +28,6 @@ class EvaluateRequest(BaseModel):
 
 class EvaluateResponse(BaseModel):
     result: str
+   
+class AdminUpdateRole(BaseModel):
+    role: str
