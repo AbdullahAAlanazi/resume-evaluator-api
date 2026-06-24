@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import models
 from database import create_db
 
 from routers import auth, evaluate
